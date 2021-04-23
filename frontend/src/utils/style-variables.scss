@@ -5,3 +5,11 @@
     padding-top: 100%;
   }
 }
+$background: #25272A;
+$mainFont: 'Roboto';
+
+@mixin opened {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+}

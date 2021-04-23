@@ -28,7 +28,7 @@ function ListChats() {
             <Chat />
             <Chat />
         </ul>
-        </section>
+  </section>
   );
 }
 

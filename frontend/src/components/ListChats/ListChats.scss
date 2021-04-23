@@ -1,16 +1,5 @@
 @import '../../utils/style-variables.scss';
 
-.title-block{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Roboto';
-    font-weight: normal;
-    color: rgba(253, 253, 253, 0.692);
-    padding: 5% 10% 5% 10%;
-}
-
-$background: #25272A;
 
 .list-chats {
     display: flex;
@@ -22,12 +11,22 @@ $background: #25272A;
     mix-blend-mode: normal;
     opacity: 0.75;
 
+    .title-block{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: $mainFont;
+      font-weight: normal;
+      color: rgba(253, 253, 253, 0.692);
+      padding: 5% 10% 5% 10%;
+  }
+
     &__number{
         font-size: 14px;
     }
   
     @media screen and (max-width : 719px) {
-      width: 15%;
+      width: 25%;
       opacity: 0;
       visibility: hidden;
       position: relative;
@@ -35,16 +34,25 @@ $background: #25272A;
       transition: opacity .2s ease, visibility .2s ease, left .3s ease;
   
       &_opened {
-        opacity: 1;
-        visibility: visible;
-        left: 0;
+        @include opened
+      }
+
+      &__container{
+        padding-left: 10%;
       }
     }
+
+    @media screen and (min-width : 768px) {
+      &:hover {
+        cursor: pointer;
+        opacity: .5;
+      }
+    }
+    
   
     &__container {
       display: flex;
       flex-direction: column;
-      width: 78%;
       height: 82%;
       margin: 0;
       list-style: none;

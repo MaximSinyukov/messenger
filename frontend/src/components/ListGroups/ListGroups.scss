@@ -18,9 +18,7 @@
     transition: opacity .2s ease, visibility .2s ease, left .3s ease;
 
     &_opened {
-      opacity: 1;
-      visibility: visible;
-      left: 0;
+      @include opened
     }
   }
 
