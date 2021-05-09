@@ -8,7 +8,6 @@
   transition: opacity .2s linear;
   font-family: 'Roboto';
   align-items: center;
-  @include square-container;
 
   &_active {
     opacity: 1;
@@ -21,8 +20,9 @@
         cursor: pointer;
         opacity: .8;
         transition: all .3s ease-in-out ;
-        box-shadow: rgb(10, 255, 255) 5px 10px 30px; 
-        background: linear-gradient(173deg, rgba(0, 255, 248, 0.196) 34%, rgba(14, 250, 243, 0.408) 100%);
+        box-shadow: rgb(255, 255, 255) 5px 10px 30px; 
+        background: linear-gradient(173deg, rgba(149, 150, 150, 0.281) 34%, rgba(227, 252, 252, 0.37) 100%);
+        border-radius: 20px;
       }
   }
 
