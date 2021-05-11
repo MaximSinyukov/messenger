@@ -1,8 +1,7 @@
 @import '../../utils/style-variables.scss';
 
 .list-groups {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   width: 6.25%;
   height: 100%;
   overflow: hidden;
@@ -12,7 +11,7 @@
   @media screen and (max-width : 719px) {
     width: 15%;
     opacity: 0;
-    visibility: hidden;
+    @include visibility-h;
     position: relative;
     left: -15%;
     transition: opacity .2s ease, visibility .2s ease, left .3s ease;
@@ -23,8 +22,7 @@
   }
 
   &__container {
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
     width: 66.67%;
     height: 82%;
     padding: 0;

@@ -13,3 +13,12 @@ $mainFont: 'Roboto';
   visibility: visible;
   left: 0;
 }
+
+@mixin visibility-h {
+  visibility: hidden;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
