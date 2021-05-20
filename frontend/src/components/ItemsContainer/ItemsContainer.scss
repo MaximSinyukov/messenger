@@ -1,0 +1,75 @@
+@import '../../utils/style-variables.scss';
+
+
+.items-container {
+    @include flex-col;
+    width: 15%;
+    height: 100%;
+    overflow: hidden;
+    background: $background;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+
+    .title-block{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: $mainFont;
+      font-weight: normal;
+      color: rgba(253, 253, 253, 0.692);
+      padding: 5% 10% 5% 10%;
+  }
+
+    &__number{
+        font-size: 14px;
+    }
+  
+    @media screen and (max-width : 719px) {
+      width: 25%;
+      opacity: 0;
+      @include visibility-h;
+      position: relative;
+      left: -15%;
+      transition: opacity .2s ease, visibility .2s ease, left .3s ease;
+  
+      &_opened {
+        @include opened
+      }
+
+      &__container{
+        padding-left: 10%;
+      }
+    }
+
+    @media screen and (min-width : 768px) {
+      &:hover {
+        // cursor: pointer;
+        // opacity: .5;
+      }
+    }
+    
+  
+    &__container {
+      display: block;
+      height: 82%;
+      margin: 0;
+      list-style: none;
+      overflow-y: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  
+      &::-webkit-scrollbar {
+        width: 7px;
+        height: 4px;
+        background-color: $background;
+      }
+    
+      &::-webkit-scrollbar-thumb { 
+        border-radius: 10px;
+        background-color: #e0d6d6b4;
+        height: 20px;
+      }
+    }
+  
+  }
+  
